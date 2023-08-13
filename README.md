@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Backend API built on top of Rails v7.0.7 and Ruby v3.2.2
 
 Things you may want to cover:
 
