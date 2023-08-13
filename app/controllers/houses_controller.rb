@@ -53,7 +53,7 @@ class HousesController < ApplicationController
 
     private
     def set_house
-        @house = House.find(user_id: authenticate_user!, id: params[:id])
+        @house = House.find_by(user_id: authenticate_user!, id: params[:id])
     end
 
     def house_params
