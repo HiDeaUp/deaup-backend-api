@@ -25,6 +25,11 @@ class HousesController < ApplicationController
 
     # POST /houses/1 or /houses/1.json
     def show
+        if @house
+            render json: @house
+        else
+            render json: nil, status: :unauthorized
+        end
     end
 
     # POST /houses or /houses.json
@@ -52,7 +57,7 @@ class HousesController < ApplicationController
     end
 
     def house_params
-        params.require(:house).permit(:title, :description, :address, :image, 
+        params.require(:house).permit(:title, :description, :category, :address, :image,
             :price, :bedroom, :bathroom, :car)
     end
 end
